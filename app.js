@@ -6,7 +6,7 @@ const datePointer = document.querySelector(".date");
 transform = getTransform();
 
 //Functions
-function updateClock() {
+setInterval(()=> {
     const nowTime = new Date();
     console.log(nowTime);
     const second = nowTime.getSeconds() * 6;
@@ -16,7 +16,7 @@ function updateClock() {
     hourPointer.style[transform] = `rotate(${hour}deg)`;
     minutePointer.style[transform] = `rotate(${minute}deg)`;
     secondPointer.style[transform] = `rotate(${second}deg)`;
-}
+},1000);
 function getTransform() {
     const style = document.createElement("div").style;
     let transform;
@@ -28,4 +28,3 @@ function getTransform() {
 }
     
 
-setInterval(updateClock,1000);

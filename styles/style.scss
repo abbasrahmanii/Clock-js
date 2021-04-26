@@ -23,7 +23,8 @@ body {
   border-radius: 50%;
   background-color: #323235;
   border: 7px solid rgb(202, 38, 52);
-  box-shadow: 0px 0px 20px #000000fc, 0 20px 20px #1f1919fc;
+  box-shadow: 0px 0px 20px #000000fc, 0 -25px 20px #080000fc,
+    0 25px 20px #080000fc;
   .hour {
     position: absolute;
     top: 30%;
@@ -52,12 +53,12 @@ body {
     position: absolute;
     top: 10%;
     left: calc(50%-2px);
-    height: 40%;
+    height: 46%;
     width: 4px;
     border-radius: 5px;
     background: rgba(15, 1, 2, 0.692);
     z-index: 3;
-    transform-origin: 50% 100%;
+    transform-origin: 50% 87.5%;
     transform: (rotate(0deg));
   }
   .center {
@@ -77,11 +78,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: aquamarine;
+    color: rgb(243, 79, 93);
+    font-family: "Lobster", cursive;
     width: 40px;
-    height: 40px;
+    height: 36px;
     background: #262728;
-    border-radius: 50%;
+    border-radius: 17px;
     z-index: 0;
   }
   .number {
@@ -124,6 +126,7 @@ footer {
   align-items: center;
   color: rgb(243, 79, 93);
   flex-direction: column;
+  text-shadow: 4px 4px black;
   h2 {
     font-weight: 600;
     font-size: 2.3rem;
