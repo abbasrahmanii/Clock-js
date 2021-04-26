@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+body {
+  position: relative;
+  background: #262728;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.clock {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #323235;
+  border: 7px solid rgb(202, 38, 52);
+  box-shadow: 0px 0px 20px #000000fc, 0 20px 20px #1f1919fc;
+  .hour {
+    position: absolute;
+    top: 30%;
+    left: calc(50%-6px);
+    height: 20%;
+    width: 10px;
+    border-radius: 6px;
+    background: rgb(30, 153, 126);
+    z-index: 1;
+    transform-origin: 50% 100%;
+    transform: (rotate(0deg));
+  }
+  .minute {
+    position: absolute;
+    top: 13%;
+    left: calc(50%-4px);
+    height: 37%;
+    width: 6px;
+    border-radius: 5px;
+    background: rgb(38, 202, 166);
+    z-index: 2;
+    transform-origin: 50% 100%;
+    transform: (rotate(0deg));
+  }
+  .second {
+    position: absolute;
+    top: 10%;
+    left: calc(50%-2px);
+    height: 40%;
+    width: 4px;
+    border-radius: 5px;
+    background: rgba(15, 1, 2, 0.692);
+    z-index: 3;
+    transform-origin: 50% 100%;
+    transform: (rotate(0deg));
+  }
+  .center {
+    position: absolute;
+    top: calc(50%-9px);
+    left: calc(50%-9px);
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: rgb(38, 202, 166);
+    z-index: 5;
+  }
+  .date {
+    position: absolute;
+    top: calc(50%-20px);
+    right: 13%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aquamarine;
+    width: 40px;
+    height: 40px;
+    background: #262728;
+    border-radius: 50%;
+    z-index: 0;
+  }
+  .number {
+    display: inline-block;
+    font-size: 1.5rem;
+    font-weight: 800;
+    font-family: "New Tegomin", serif;
+    color: cyan;
+    .three {
+      position: absolute;
+      top: 50%;
+      right: 3%;
+      transform: translate(-6%, -50%);
+    }
+    .six {
+      position: absolute;
+      bottom: 3%;
+      right: 50%;
+      transform: translate(50%, 6%);
+    }
+    .nine {
+      position: absolute;
+      top: 50%;
+      left: 3%;
+      transform: translate(6%, -50%);
+    }
+    .twelve {
+      position: absolute;
+      top: 3%;
+      right: 50%;
+      transform: translate(50%, -6%);
+    }
+  }
+}
+footer {
+  font-family: "Lobster", cursive;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(243, 79, 93);
+  flex-direction: column;
+  h2 {
+    font-weight: 600;
+    font-size: 2.3rem;
+    letter-spacing: 15px;
+    margin: 1rem auto;
+  }
+  h4 {
+    font-size: 1.7rem;
+    letter-spacing: 4px;
+  }
+}
